@@ -1,0 +1,28 @@
+---
+store:
+ default:
+  package: Solr
+  options:
+    url: http://aleph.ugent.be:8983/solr/proxy 
+
+query: "source:ser01"
+maxurl: 500
+maxsize: 10485760
+filetemplate: sitemap%-3.3d.xml.gz
+indextemplate: sitemap_index.xml
+baseurl: http://localhost
+
+sitemap:
+    changefreq: weekly
+    priority: 0.5    
+
+fixes:
+    # Set the sitemap.loc field
+    - "set_field('baseurl','http://search.ugent.be/meercat/x/view')"
+    - "copy_field('baseurl','loc.$append')"
+    - "copy_field('source','loc.$append')"
+    - "copy_field('fSYS','loc.$append')"
+    - "join_field('loc','/')"
+    # Set the sitmap.lastmod field
+    - "copy_field('fDATE','lastmod')"
+    - replace_all("lastmod","^(\\d{4})(\\d{2})(\\d{2}).*","\$1-\$2-\$3")
