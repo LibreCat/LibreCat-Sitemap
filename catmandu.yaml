@@ -5,7 +5,7 @@ store:
   options:
     url: http://aleph.ugent.be:8983/solr/proxy 
 
-query: "source:ser01"
+query: "source:rug01 OR source:ser01 OR source:bkt01 OR source:dbs01 OR source:ebk01 OR source:ejn01"
 maxurl: 500
 maxsize: 10485760
 filetemplate: sitemap%-3.3d.xml.gz
