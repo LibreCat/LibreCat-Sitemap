@@ -1,5 +1,5 @@
 Create sitemap files using Catmandu::Stores
--=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+
 
 See https://github.com/LibreCat/Catmandu for more information on Catmandu
 
@@ -7,7 +7,7 @@ This project exports Catmandu::Store information as a sitemap file for easy inde
 search engines.
 
 Usage
--=-=-=
+
 
  Configure your application using the catmandu.yml file
 
